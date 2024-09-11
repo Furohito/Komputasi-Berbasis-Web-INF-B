@@ -1,0 +1,32 @@
+body{
+    background-color: grey;
+}
+a, .dashboard{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+
+}
+nav {
+    display: inline-block;
+    background-color: white;
+    display: flex;
+    font-family: "Arial Black";
+    margin-right: auto;
+    padding: 10px 15px;
+}
+form{
+    font-family: "Berlin Sans FB";
+    background-color: gainsboro;
+    padding: 50px 25px;
+    margin: auto;
+    display: inline-block;
+}
+#tulisan{
+    background-color: gainsboro;
+    margin: auto;
+    display: inline-block;
+    padding: 10px 5px;
+    flex: auto;
+    font-family:"Arial Black" ;
+}

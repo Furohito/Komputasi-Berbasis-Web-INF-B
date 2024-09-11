@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="dashboard.css"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percobaan Dashboard pert 1</title>
+</head>
+<body>
+<nav>
+  <div>
+    |<a class="dashboard" href="dashboard.html">Home</a>|
+    |<a class="dashboard" href="About.html">About</a>|
+    |<a class="dashboard" href="Contact.html">Contact</a>|
+  </div>
+</nav>
+
+<form action="action">
+  <h1 id="tulisan">Contact Us</h1>
+  <div>
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" required>
+  </div>
+<br>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+<br>
+  <div>
+    <label for="hobi">Hobi:</label>
+    <br>
+    <input type="checkbox" id="hobi" name="hobi[]" required>Membaca
+    <br>
+    <input type="checkbox" id="hobi" name="hobi[]" required>main bekicot
+    <br>
+    <input type="checkbox" id="hobi" name="hobi[]" required>main sepeda
+  </div>
+<br>
+  <div>
+    <label for="JenisKelamin">Jenis Kelamin:</label>
+    <br>
+    <input type="radio" id="JenisKelamin" name="jeniskelamin" required> Laki-Laki
+    <br>
+    <input type="radio" id="JenisKelamin" name="jeniskelamin" required> Perempuan
+    <br>
+    <input type="radio" id="JenisKelamin" name="jeniskelamin" required> Robot
+  </div>
+  <br>
+  <input type="submit" name="submit" value="kirim">
+  <input type="reset" name="reset" value="hapus">
+</body>
+</html>
