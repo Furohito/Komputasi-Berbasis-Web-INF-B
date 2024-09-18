@@ -1,0 +1,59 @@
+#navbarutama{
+    background-color: #3d77ba;
+}
+
+#teksberita{
+    text-align: center, justify-all;
+}
+.gambar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer{
+    list-style-type: none;
+}
+
+#futer{
+    display: block;
+    background-color: #474646;
+    width: 100%;
+    height: 100%;
+}
+
+.linkberita{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+h5{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    color: #eae2e2;
+}
+
+#banner{
+    width: 100%;
+    height: 100%;
+}
+li a{
+    color: #c3c3c3;
+    text-decoration: none;
+    display: block;
+    padding-left: 10px;
+}
+
+.logo {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    padding-right: auto;
+    padding-left: auto;
+}
+.kopirek{
+    display: block;
+    margin-left: auto;
+    color: #eae2e2;
+}
