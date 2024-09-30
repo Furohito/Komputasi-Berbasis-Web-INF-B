@@ -1,0 +1,19 @@
+.jumbotron{
+    padding-top: 2rem;
+    background-color: #faddbd;
+}
+
+#contact{
+    background-color: #faddbd;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+.btn{
+    background-color: #0b5ed7;
+    color: white;
+}
+.custom_wave{
+    widht: 100%;
+    height: auto;
+}
