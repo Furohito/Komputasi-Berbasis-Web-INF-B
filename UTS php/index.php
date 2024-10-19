@@ -1,0 +1,104 @@
+<?php include 'db.php'; ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">abdrhakim</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.php">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="experiences.php">Experiences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="skills.php">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center">
+    <div class="container">
+        <img src="foto_mahasiswa.png" alt="Profile Photo" class="profile-img">
+        <h1 class="display-4">Hallo, Saya</h1>
+        <h2 class="mb-3">Abdurrahman Hakim</h2>
+
+        <?php
+        // Ambil data dari tabel homepage
+        $sql = "SELECT content FROM homepage LIMIT 1";
+        $result = $conn->query($sql);
+
+        // Tampilkan data jika ada hasil
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo '<p>' . $row["content"] . '</p>';
+            }
+        } else {
+            echo '<p>Konten tidak tersedia.</p>';
+        }
+        ?>
+
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#socialModal">Discover Now</button>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="socialModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Temukan Saya di</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Pilih platform di bawah ini untuk terhubung:</p>
+                <a href="https://www.linkedin.com/in/abdurrahman-hakim-makarim/" target="_blank" class="btn btn-primary">
+                    <img src="linkedin.png" width="50px" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/abdrhakimm/" target="_blank" class="btn btn-danger">
+                    <img src="instagram.png" width="50px" alt="Instagram">
+                </a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-4">
+    <div class="container">
+        <p>&copy; 2024 Abdurrahman Hakim Makarim. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
