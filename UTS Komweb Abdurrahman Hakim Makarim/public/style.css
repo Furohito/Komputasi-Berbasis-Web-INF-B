@@ -1,0 +1,252 @@
+/* CSS Variables */
+:root {
+    --primary-color: #ffd700;
+    --secondary-color: #343a40;
+    --background-color: #f8f9fa;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffa500 !important; /* Warna oranye saat hover */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #575151;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.hero img {
+    border-radius: 50%;
+    max-width: 200px;
+    border: 5px solid var(--primary-color);
+    padding: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.hero button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #ffc107;
+}
+
+/* Section Styles */
+.about-section, .experiences-section, .skills-section, .contact-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f5f5dc;
+}
+
+.skills-section {
+    flex: 1; /* Agar section ini mengisi ruang kosong di antara navbar dan footer */
+}
+
+/* Contact Form Styling */
+.contact-form {
+    border: 3px solid var(--primary-color); /* Border kuning untuk keseluruhan form */
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    outline: none;
+    background-color: transparent;
+    font-size: 1rem;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* Form Group Styling */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.form-group label {
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background-color: #fff;
+    padding: 0 5px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Button Styling */
+.contact-form button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ffc107;
+}
+
+/* Card Styles for Skills Section */
+.card {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px var(--card-shadow);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.card:hover {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card-footer {
+    background-color: transparent;
+    border-top: none;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Social Media Links */
+.social-icon-link {
+    display: inline-block;
+}
+
+.social-icon-link:focus {
+    outline: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .about-section, .experiences-section, .skills-section, .contact-section {
+        padding: 20px; /* Mengurangi padding pada layar kecil untuk kenyamanan */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Mengurangi ukuran font pada layar kecil */
+    }
+
+    .card {
+        margin-bottom: 30px; /* Menambah jarak antar card di layar kecil */
+    }
+
+    .card-title {
+        font-size: 1.1rem; /* Mengurangi ukuran judul card untuk layar kecil */
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+a:focus {
+    outline: none;
+}
